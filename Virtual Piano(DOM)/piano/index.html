@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Piano</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .piano {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    #key {
+    position: relative;
+    width: 40px;
+    height: 200px;
+    margin-right: 2px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+    }
+
+    #key-black {
+      width: 30px;
+      height: 120px;
+      background-color: black;
+      position: relative;
+      z-index: 1;
+      margin-left: -15px;
+      margin-bottom: 0;
+    }
+
+    #key[data-note]:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#key[data-note]::after {
+  content: attr(data-note);
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #000;
+}
+
+    [data-note]::after {
+  content: attr(data-note);
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  margin-top: 9em
+}
+  </style>
+</head>
+<body>
+  <h1 style="display: flex; justify-content: center; font-family: sans-serif; margin-bottom: -60px;">Virtual Piano </h1>
+    <div class="container">
+  <div class="piano">
+    <div id="key" data-note="C" class="key1"></div>
+    <div id="key-black"  class="black1"></div>
+    <div  id="key" data-note="D" class="key2"></div>
+    <div id="key-black"  class="black2"></div>
+    <div id="key" data-note="E" class="key3"></div>
+    <div  id="key" data-note="F" class="key4"></div>
+    <div  id="key-black" class="black3"></div>
+    <div id="key" data-note="G" class="key5"></div>
+    <div id="key-black"  class="black4"></div>
+    <div id="key" data-note="A"  class="key6"></div>
+    <div id="key-black"  class="black5"></div>
+    <div id="key" data-note="B" class="key7"></div>
+    <div id="key" data-note="C"  class="key8"></div>
+    <div id="key-black"  class="black6"></div>
+    <div id="key" data-note="D" class="key9"></div>
+    <div id="key-black"  class="black7"></div>
+    <div id="key" data-note="E" class="key10"></div>
+    <div id="key" data-note="F" class="key11"></div>
+    <div id="key-black"  class="black8"></div>
+    <div id="key" data-note="G" class="key12"></div>
+    <div id="key-black" class="black9"></div>
+    <div id="key" data-note="A" class="key13"></div>
+    <div id="key-black" class="black10"></div>
+    <div id="key" data-note="B" class="key14"></div>
+    <div id="key" data-note="C" class="key15"></div>
+    <div id="key-black" class="black11"></div>
+    <div id="key" data-note="D" class="key16"></div>
+    <div id="key-black" class="black12"></div>
+    <div id="key" data-note="E" class="key17"></div>
+    <div id="key" data-note="F" class="key18"></div>
+    <div id="key-black" class="black13"></div>
+    <div id="key" data-note="G" class="key19"></div>
+    <div id="key-black" class="black14"></div>
+    <div id="key" data-note="A" class="key20"></div>
+    <div id="key-black" class="black15"></div>
+    <div id="key" data-note="B" class="key21"></div>
+   </div>
+</div>
+<script src="./script.js"></script>
+</body>
+</html> 
+
